@@ -3,6 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
 
+# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
+gem 'webpacker', '~> 5.0'
+# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+gem 'turbolinks', '~> 5'
+
 gem 'bcrypt'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'http'
@@ -13,7 +18,10 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 gem 'sprockets', '< 4'
 gem 'sassc-rails'
 
-gem 'faker'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+
+
+gem 'devise'
 
 group :development do
   gem 'listen', '~> 3.2'
